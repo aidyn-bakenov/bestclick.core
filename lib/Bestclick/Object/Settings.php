@@ -21,7 +21,7 @@ class Settings
 	#region Свойства
 
 	protected bool $ready = false;
-	protected EO_Language $language;
+	protected ?EO_Language $language = null;
 	protected array $files = [];
 
 	#endregion
@@ -45,9 +45,9 @@ class Settings
 	}
 
 	/**
-	 * @return EO_Language
+	 * @return EO_Language|null
 	 */
-	public function getLanguage(): EO_Language
+	public function getLanguage(): ?EO_Language
 	{
 		return $this->language;
 	}

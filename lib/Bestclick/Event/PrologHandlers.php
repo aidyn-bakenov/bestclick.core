@@ -26,8 +26,9 @@ class PrologHandlers
 	 * @throws ObjectException
 	 * @throws ObjectPropertyException
 	 * @throws SystemException
+	 * @noinspection PhpUnused
 	 */
-	public function onLoad(): void
+	public static function onProlog(): void
 	{
 		$isAdminSection = Context::getCurrent()->getRequest()->isAdminSection();
 		if (!$isAdminSection)
